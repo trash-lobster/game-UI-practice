@@ -1,0 +1,14 @@
+{
+    "scenes": [
+        {
+            "name": "Level 1",
+            "code": "l1",
+            "scenePath": "res://src//level//scenes//Level1.tscn"
+        },
+        {
+            "name": "Level 2",
+            "code": "l2",
+            "scenePath": "res://src//level//scenes//Level2.tscn"
+        }
+    ]
+}

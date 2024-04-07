@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.5, 395.5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_bottom = 0.548
+margin_left = -85.0
+margin_top = 541.0
+margin_right = 1154.0
+margin_bottom = 611.2
+color = Color( 0.360784, 0.0588235, 0.0588235, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 256.0
+margin_top = 72.0
+margin_right = 697.0
+margin_bottom = 263.0
+rect_scale = Vector2( 10, 10 )
+text = "LEVEL 2"
+
+[node name="NextLevel" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+position = Vector2( 1013, 326 )
+shape = SubResource( 1 )
+
+[node name="PreviousLevel" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PreviousLevel"]
+position = Vector2( 6, 332 )
+shape = SubResource( 1 )

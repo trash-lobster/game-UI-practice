@@ -9,7 +9,7 @@ public class Main : Node2D
         SceneManager = GetNode<SceneManager>("SceneManager");
 
         var startButton = (MenuButton) GetNode("Start");
-        startButton.OnPress = () => { GetTree().ChangeScene(SceneManager.Levels.CurrentLevel.Scene); };
+        startButton.OnPress = () => { GetTree().ChangeScene(SceneManager.Levels.CurrentLevel.ScenePath); };
 
         var settingButton = (MenuButton) GetNode("Settings");
         settingButton.OnPress = () => { GD.Print("Hello - settings"); };

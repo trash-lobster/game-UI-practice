@@ -7,7 +7,8 @@ public class Level : Node2D
     [Export]
     public string LevelCode { get; set; }
     [Export]
-    public string Scene { get; set; }
+    public string ScenePath { get; set; }
+    public Control Scene { get; set; }
     public Level PreviousLevel { get; set; }
     public Level NextLevel { get; set; }
 
@@ -15,17 +16,9 @@ public class Level : Node2D
     {
         LevelName = name;
         LevelCode = code;
-        Scene = scenePath;
-    }
-
-    public void GoToNextLevel()
-    {
-        // emit signal to change scene to next level
-    }
-
-    public void GoToLastLevel()
-    {
-
+        ScenePath = scenePath;
+        var scene = ResourceLoader.Load<PackedScene>(ScenePath).Instance();
+        Scene = (Control) scene;
     }
 
     public override string ToString()
